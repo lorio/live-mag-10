@@ -1,0 +1,37 @@
+//@import "compass/css3/box-sizing";
+//@import "compass/typography";
+@import "singularitygs";
+@import "compass/utilities/general/clearfix";
+$set-box-sizing: false;
+$grids: 8;
+$gutters: 1/6;
+$background-grid-color: #eee;
+$experimental-support-for-svg: true;
+$experimental-support-for-pie: true;
+$border-radius:(5px);
+$main-color: #1a1a1a;
+$whitish: #F9F9F9;
+$neutral-color: #767676;
+$accent-color: #ef2774;
+$dark-accent: #501111;
+$heading-font-family: Courier, "Lucida Sans Typewriter", "Lucida Typewriter", "Courier New", "American Typewriter";
+$sans: 'Author', Helvetica, Arial, sans-serif;
+$footer-height: 4em;
+
+@function black($opacity){
+    @return rgba(0,0,0,$opacity)
+}
+@function white($opacity){
+    @return rgba(255,255,255,$opacity)
+}
+//$set-box-sizing: false;
+@mixin box-emboss($opacity, $opacity2){
+    box-shadow:white($opacity) 0 1px 0, inset black($opacity2) 0 1px 0;
+}
+@mixin letterpress($opacity){
+    text-shadow:white($opacity) 0 1px 0;
+}
+
+
+//$gradient: background(linear-gradient(#8ec5d9 0%, #51b1c4 35%, #4689cf 100%));
+//$gradient: background-image(linear-gradient(top-left,#0e0e0e,#d8dde0));
