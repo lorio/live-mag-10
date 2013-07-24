@@ -1,8 +1,8 @@
-//@import "compass/css3/box-sizing";
-//@import "compass/typography";
 @import "singularitygs";
+@import "compass/typography/links/link-colors";
 @import "compass/utilities/general/clearfix";
 $set-box-sizing: false;
+$container-width: 798px;
 $grids: 8;
 $gutters: 1/6;
 $background-grid-color: #eee;
@@ -12,6 +12,7 @@ $border-radius:(5px);
 $main-color: #1a1a1a;
 $whitish: #F9F9F9;
 $neutral-color: #767676;
+//$pager-link: +link-colors(#05c, #05c, #05c, #05c, #05c);
 $accent-color: #ef2774;
 $dark-accent: #501111;
 $heading-font-family: Courier, "Lucida Sans Typewriter", "Lucida Typewriter", "Courier New", "American Typewriter";
@@ -30,6 +31,17 @@ $footer-height: 4em;
 }
 @mixin letterpress($opacity){
     text-shadow:white($opacity) 0 1px 0;
+}
+@mixin center {
+	width: $container-width;
+	text-align: center;
+}
+@mixin toc-link {
+	color: $main-color;
+	text-decoration: none;
+	&:hover {
+		color: $accent-color;
+	}
 }
 
 

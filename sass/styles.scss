@@ -2,6 +2,7 @@
 @import "Partials/typography";
 @import "Partials/normalize";
 @import "Partials/base";
+@import "Partials/pager";
 //@import "Partials/navigation";
 
 * {
@@ -12,7 +13,8 @@
 html {height: 100%}
 body {
 	background: image-url("zigzag.png") repeat;
-	//background-repeat: repeat;
+	font-family: $sans;
+	font-weight: bolder;
 	color : $whitish;
 	#wrapper {
 		width: 800px;
@@ -30,7 +32,7 @@ body {
 			//@include background(linear-gradient(top, #dee4e6, #8ec5d9));
 			//background-image: url(../images/satinweave.png);
 			color: $main-color;
-			max-width: 798px;		
+			max-width: $container-width;		
 			//min-height: 100%;
 			//height: 100%;
 			//height: auto !important;
@@ -44,7 +46,6 @@ body {
 				}
 			nav {
 				ul {
-					//padding-top: .5em;
 					text-align: center;
 					li {
 						font-family: $heading-font-family;
@@ -61,53 +62,62 @@ body {
 					}	
 				}
 			}
-			.issue {
-				display: inline-block;
-				text-align: center;
-				//padding-bottom: $footer-height;
-				#date {
+				.issue {
+					display: inline-block;
 					text-align: center;
-					font-weight: bold;
-					font-size: 1.5em;
-					}
-				img {@include box-emboss(0.8, 0.05);}
-				#toc {
-					margin-top: 2em;
-					font-size: 1.3em;
 					position: relative;
-					@include grid-span(6, 2);
-					background-color: #e9eff1;
-					border: 1px dotted #ed541b;
-					@include border-radius();
-					h3 {margin-bottom: 0;} 
-					ul {
+					width: 100%;
+					//padding-bottom: $footer-height;
+					#date {
+						text-align: center;
+						font-weight: bold;
+						font-size: 1.5em;
+						}
+					img {
+						@include box-emboss(0.8, 0.05);
+						text-align: center;
+					}
+					#toc {
+						margin-top: 2em;
+						font-size: 1.3em;
 						position: relative;
-						font-family: $heading-font-family;
-						float: none;
-						padding: 20px 0;
-						li {
-						display: inline;
-						padding: .6em;
-						line-height: 1.3em;
-						white-space: nowrap;
-						font-weight: 600;
-						a {
-							color: $main-color;
-							text-decoration: none;
-							&:hover {
+						@include grid-span(6, 2);
+						background-color: #e9eff1;
+						border: 1px dotted #ed541b;
+						@include border-radius();
+						h3 {
+							margin-bottom: 0;
 							color: $accent-color;
-							}
+							@include letterpress(1);
+						} 
+						ul {
+							position: relative;
+							font-family: $heading-font-family;
+							float: none;
+							padding: .5em 0;
+							li {
+							display: inline;
+							padding: .6em;
+							line-height: 1.3em;
+							white-space: nowrap;
+							font-weight: 600;
+							a {@include toc-link;}
 						}
 					}
 				}
 			}
+			#footer-nav {
+				clear: both;
+				@include center;
+				a {@include toc-link;}
+			}
 		}
-	}	
+		
 		#footer {
 			//@include grid-span(5, 1);
 			width: 100%;
 			position: relative;
-			//margin-top: -4em auto;
+			margin-top: 1em;
 			padding: 1em;
 			height: 4em;
 			clear: both;
@@ -122,26 +132,18 @@ body {
 	}
 }
 
-.menu, .no9, .poem, .byline, .title {margin: 0 150px 20px 150px}
+.poem {
+	@include isolation-span(5, 3, both);
+	text-align: left;
+	line-height: 1.2em;
+}
 h1, h2.title {
 	 font-family: $heading-font-family;
 	 padding-top: 0;
 	 color: $main-color;
 	 }
-p {font-size: 90%}
+//p {font-size: 90%}
 .prose {margin: 0 100px 20px 100px}
-.byline {
-	border-top: 2px #330 dotted;
-	text-align: right;
-	margin-bottom: 8px;	
-	p {margin: 0;
-	   color: #330;
-	   font-family: $heading-font-family;
-	   font-weight:600;
-	   font-size: 16px;
-	   margin-top: 2px;
-	 }
-}
 #logo h1 {
 	@include grid-span(3, 1);
 	line-height: .6em;
@@ -162,6 +164,7 @@ p {font-size: 90%}
 	text-align: center;
 	margin: 1.3em 1.3em 0 0;
 }
+.clearfix {@include clearfix;}
 // .gradient {
 // 	@include background(linear-gradient(#8ec5d9 0%, #51b1c4 35%, #4689cf 100%));
 // }

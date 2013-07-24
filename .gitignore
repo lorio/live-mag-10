@@ -1,2 +1,2 @@
-.DS_Store
-Sass/sass-cache
+*.DS_Store
+.sass-cache
