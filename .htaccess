@@ -14,3 +14,9 @@ deny from all
 AuthName livemagnyc.com
 AuthUserFile /home/jeffmag/public_html/_vti_pvt/service.pwd
 AuthGroupFile /home/jeffmag/public_html/_vti_pvt/service.grp
+
+<FilesMatch "\.(ttf|otf|woff)$">
+<IfModule mod_headers.c>
+        Header set Access-Control-Allow-Origin "*"
+</IfModule>
+</FilesMatch>
