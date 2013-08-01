@@ -71,7 +71,14 @@ body {
 						text-align: center;
 						font-weight: bold;
 						font-size: 1.5em;
+						a {
+							color: $accent-color;
+							text-decoration: none;
+							&:hover {
+							border-bottom: 3px dotted $accent-color;
+							}
 						}
+					}
 					img {
 						@include box-emboss(0.8, 0.05);
 						text-align: center;
@@ -130,19 +137,26 @@ body {
 		}
 	}
 }
-
+section {display: table-row}
+figcaption {padding-bottom: 30px;}
+.prose {
+	@include isolation-span(6, 2, both);
+	text-align: left;
+	line-height: 1.2em;
+}
 .poem {
 	@include isolation-span(5, 3, both);
 	text-align: left;
 	line-height: 1.2em;
 }
+.poem p:last-of-type {padding-bottom: 30px;}
 h1, h2.title {
 	 font-family: $heading-font-family;
 	 padding-top: 0;
 	 color: $main-color;
 	 }
+h2.title {padding-bottom: 10px;}
 //p {font-size: 90%}
-.prose {margin: 0 100px 20px 100px}
 #logo h1 {
 	@include grid-span(3, 1);
 	line-height: .6em;
@@ -152,8 +166,9 @@ h1, h2.title {
 	@include grid-span(4, 4);
 	font-weight: bold; 
 	font-family: $sans;
-	h3 {padding-top: .1em;}
+	h3 {padding-top: .1em; padding-left: 20px;}
 }
+.fb {color: $fb;}
 .btn {
 	@include grid-span(1, 8);
 	@include box-emboss(0.8, 0.05);
