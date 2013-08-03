@@ -41,11 +41,13 @@ body {
 				//padding-top: 4em;
 				background-color: $accent-color;
 				color: $main-color;
-				@include letterpress(0.8);
+				@include letterpress(0.5);
+				a {@include unstyled-link;}
 				}
 			nav {
 				ul {
 					text-align: center;
+					padding: 0;
 					li {
 						font-family: $heading-font-family;
 						font-weight: 600;
@@ -138,7 +140,8 @@ body {
 	}
 }
 section {display: table-row}
-figcaption {padding-bottom: 30px;}
+figure {padding-bottom: 30px;}
+figcaption a {@include link-colors(#05c, #05c, #05c, #05c, #05c);}
 .prose {
 	@include isolation-span(6, 2, both);
 	text-align: left;
@@ -166,7 +169,7 @@ h2.title {padding-bottom: 10px;}
 	@include grid-span(4, 4);
 	font-weight: bold; 
 	font-family: $sans;
-	h3 {padding-top: .1em; padding-left: 20px;}
+	h3 {padding-top: .2em; padding-left: 24px;}
 }
 .fb {color: $fb;}
 .btn {
@@ -174,9 +177,12 @@ h2.title {padding-bottom: 10px;}
 	@include box-emboss(0.8, 0.05);
 	@include letterpress(0.9);
 	@include border-radius;
-	background-color: #8ec5d9;
+	background-color: #eec07d;
+	color: $main-color;
+	font-weight: bold;
 	text-align: center;
-	margin: 1.3em 1.3em 0 0;
+	margin: 1.4em 2em 0 0;
+	padding-top: .2em;
 }
 .clearfix {@include clearfix;}
 // .gradient {
