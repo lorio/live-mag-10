@@ -84,6 +84,7 @@ body {
 					img {
 						@include box-emboss(0.8, 0.05);
 						text-align: center;
+						pointer-event: none;
 					}
 					#toc {
 						margin-top: 2em;
@@ -141,6 +142,7 @@ body {
 }
 section {display: table-row}
 figure {padding-bottom: 30px;}
+section + figure {clear: both;}
 figcaption a {@include link-colors(#05c, #05c, #05c, #05c, #05c);}
 .prose {
 	@include isolation-span(6, 2, both);
@@ -185,8 +187,5 @@ h2.title {padding-bottom: 10px;}
 	padding-top: .2em;
 }
 .clearfix {@include clearfix;}
-// .gradient {
-// 	@include background(linear-gradient(#8ec5d9 0%, #51b1c4 35%, #4689cf 100%));
-// }
 .space {color : white}
-//.gradient { @include background(radial-gradient(center, ellipse cover,#0e0e0e,#d8dde0)); }
+
