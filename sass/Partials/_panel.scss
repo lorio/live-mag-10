@@ -1,0 +1,38 @@
+ 
+// body #wrapper .container .issue 
+.panel {
+    /*display: inline-block;*/
+    margin: 0 auto;
+    width: 66%;
+    display: inline-block;
+    position: relative;
+    background-color: #eec07d;
+    margin-top: 2em;
+    /*padding: 10px 10px 8px 10px;*/
+    border: 1px dotted #ed541b;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+  
+  // .issue .panel 
+	  figure {
+	    float: left;
+	    margin-right: 18px;
+	    width: 120px;
+	  }
+  // body #wrapper .container .issue .panel 
+	  p{
+	    font:  bold 1.5em Courier, "Lucida Sans Typewriter", "Lucida Typewriter", "Courier New", "American Typewriter";
+	    color: #1a1a1a;
+	    text-align: left;
+	    margin-top: .5em;
+	  }
+  	a{text-decoration: none; display: block; padding: 10px;
+  		&:link {background-color: #eec07d;}
+  		&:visited {background-color: #eec07d;}
+  		&:hover {background-color: #e9eff1;}
+  		&:active {background-color: #e9eff1;} 
+		}
+	}

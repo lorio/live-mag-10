@@ -1,7 +1,9 @@
 @import "singularitygs";
+@import "toolkit";
 @import "compass/typography/links/link-colors";
 @import "compass/typography/links/unstyled-link";
 @import "compass/utilities/general/clearfix";
+@import "compass/css3/transform";
 $set-box-sizing: false;
 $container-width: 798px;
 $grids: 8;
@@ -43,6 +45,16 @@ $footer-height: 4em;
 	text-decoration: none;
 	&:hover {
 		color: $accent-color;
+	}
+}
+@mixin hide-text{
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+}
+@mixin mq($width: 420px) {
+	@media screen and (max-width: $width) {
+		@content;
 	}
 }
 

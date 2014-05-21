@@ -354,6 +354,28 @@ table {
   border-spacing: 0;
 }
 
+/* line 34, ../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/singularitygs-1.1.2/stylesheets/singularitygs/helpers/_box-sizing.scss */
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  *behavior: url('../behaviors/box-sizing/boxsizing.php');
+}
+
+/* line 36, ../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/toolkit-1.3.8/stylesheets/toolkit/_box-sizing.scss */
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  *behavior: url('../behaviors/box-sizing/boxsizing.php');
+}
+
+/* line 4, ../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/toolkit-1.3.8/stylesheets/toolkit/_fluid-media.scss */
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
 /* line 1, ../sass/Partials/_pager.scss */
 .pager {
   margin: 20px;
@@ -497,18 +519,18 @@ table {
   width: 100%;
 }
 /* line 39, ../sass/Partials/_dark.scss */
-.dark-container .article-wrap #date {
+.dark-container .article-wrap #date, .dark-container .article-wrap .issue article .issue-number, .issue article .dark-container .article-wrap .issue-number {
   text-align: center;
   font-weight: bold;
   font-size: 1.5em;
 }
 /* line 43, ../sass/Partials/_dark.scss */
-.dark-container .article-wrap #date a {
+.dark-container .article-wrap #date a, .dark-container .article-wrap .issue article .issue-number a, .issue article .dark-container .article-wrap .issue-number a {
   color: #ef2774;
   text-decoration: none;
 }
 /* line 46, ../sass/Partials/_dark.scss */
-.dark-container .article-wrap #date a:hover {
+.dark-container .article-wrap #date a:hover, .dark-container .article-wrap .issue article .issue-number a:hover, .issue article .dark-container .article-wrap .issue-number a:hover {
   border-bottom: 3px dotted #ef2774;
 }
 /* line 51, ../sass/Partials/_dark.scss */
@@ -547,7 +569,7 @@ table {
   text-decoration: none;
   background-color: #f9f9f9;
 }
-/* line 44, ../sass/Partials/_base.scss */
+/* line 46, ../sass/Partials/_base.scss */
 .dark-container .article-wrap article p a:hover {
   color: #ef2774;
 }
@@ -564,27 +586,122 @@ table {
   color: black;
 }
 
-/* line 9, ../sass/styles.scss */
+/* line 1, ../sass/Partials/_issues.scss */
+.issue article {
+  clear: both;
+}
+/* line 5, ../sass/Partials/_issues.scss */
+.issue article figure {
+  width: 23.63636%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0%;
+  clear: none;
+  position: relative;
+  padding: 8px;
+}
+/* line 11, ../sass/Partials/_issues.scss */
+.issue article p {
+  width: 74.54545%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  padding: 10px;
+  text-align: left;
+  font: 400 0.8em/1.4em "Author", Helvetica, Arial, sans-serif;
+}
+/* line 17, ../sass/Partials/_issues.scss */
+.issue article .issue-number {
+  position: absolute;
+  top: 90px;
+  left: 60px;
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+  -webkit-transform: scale(3, 3);
+  -moz-transform: scale(3, 3);
+  -ms-transform: scale(3, 3);
+  -o-transform: scale(3, 3);
+  transform: scale(3, 3);
+}
+/* line 24, ../sass/Partials/_issues.scss */
+.issue article .issue-number:hover, .issue article .issue-number:focus {
+  font-family: "Author", Helvetica, Arial, sans-serif;
+  color: #ef2774;
+}
+
+/* line 3, ../sass/Partials/_panel.scss */
+.panel {
+  /*display: inline-block;*/
+  margin: 0 auto;
+  width: 66%;
+  display: inline-block;
+  position: relative;
+  background-color: #eec07d;
+  margin-top: 2em;
+  /*padding: 10px 10px 8px 10px;*/
+  border: 1px dotted #ed541b;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 20, ../sass/Partials/_panel.scss */
+.panel figure {
+  float: left;
+  margin-right: 18px;
+  width: 120px;
+}
+/* line 26, ../sass/Partials/_panel.scss */
+.panel p {
+  font: bold 1.5em Courier, "Lucida Sans Typewriter", "Lucida Typewriter", "Courier New", "American Typewriter";
+  color: #1a1a1a;
+  text-align: left;
+  margin-top: .5em;
+}
+/* line 32, ../sass/Partials/_panel.scss */
+.panel a {
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+}
+/* line 33, ../sass/Partials/_panel.scss */
+.panel a:link {
+  background-color: #eec07d;
+}
+/* line 34, ../sass/Partials/_panel.scss */
+.panel a:visited {
+  background-color: #eec07d;
+}
+/* line 35, ../sass/Partials/_panel.scss */
+.panel a:hover {
+  background-color: #e9eff1;
+}
+/* line 36, ../sass/Partials/_panel.scss */
+.panel a:active {
+  background-color: #e9eff1;
+}
+
+/* line 11, ../sass/styles.scss */
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
 }
 
-/* line 14, ../sass/styles.scss */
+/* line 16, ../sass/styles.scss */
 html {
   height: 100%;
 }
 
-/* line 15, ../sass/styles.scss */
+/* line 17, ../sass/styles.scss */
 body {
   background: url('../images/zigzag.png?1339701544') repeat;
   font-family: "Author", Helvetica, Arial, sans-serif;
   color: #f9f9f9;
 }
-/* line 19, ../sass/styles.scss */
+/* line 21, ../sass/styles.scss */
 body #wrapper {
   width: 800px;
   height: auto;
@@ -595,14 +712,14 @@ body #wrapper {
   background: #f9f9f9 repeat;
   color: #1a1a1a;
 }
-/* line 28, ../sass/styles.scss */
+/* line 30, ../sass/styles.scss */
 body #wrapper .container {
   margin: 0 auto;
   background: #f9f9f9 repeat;
   color: #1a1a1a;
   max-width: 798px;
 }
-/* line 33, ../sass/styles.scss */
+/* line 35, ../sass/styles.scss */
 body #wrapper .container header {
   width: 100%;
   height: 60px;
@@ -610,7 +727,7 @@ body #wrapper .container header {
   color: #1a1a1a;
   text-shadow: rgba(255, 255, 255, 0.5) 0 1px 0;
 }
-/* line 40, ../sass/styles.scss */
+/* line 42, ../sass/styles.scss */
 body #wrapper .container header a {
   color: inherit;
   text-decoration: inherit;
@@ -620,57 +737,57 @@ body #wrapper .container header a {
 body #wrapper .container header a:active, body #wrapper .container header a:focus {
   outline: none;
 }
-/* line 43, ../sass/styles.scss */
+/* line 45, ../sass/styles.scss */
 body #wrapper .container nav ul {
   text-align: center;
   padding: 0;
 }
-/* line 46, ../sass/styles.scss */
+/* line 48, ../sass/styles.scss */
 body #wrapper .container nav ul li {
   font-family: Courier, "Lucida Sans Typewriter", "Lucida Typewriter", "Courier New", "American Typewriter";
   font-weight: 600;
   padding: 0 2em;
   display: inline;
 }
-/* line 51, ../sass/styles.scss */
+/* line 53, ../sass/styles.scss */
 body #wrapper .container nav ul li a {
   color: #ef2774;
   text-decoration: none;
 }
-/* line 54, ../sass/styles.scss */
+/* line 56, ../sass/styles.scss */
 body #wrapper .container nav ul li a:hover {
   border-bottom: 3px dotted #ef2774;
 }
-/* line 61, ../sass/styles.scss */
+/* line 63, ../sass/styles.scss */
 body #wrapper .container .issue {
   display: inline-block;
   text-align: center;
   position: relative;
   width: 100%;
 }
-/* line 67, ../sass/styles.scss */
-body #wrapper .container .issue #date {
+/* line 69, ../sass/styles.scss */
+body #wrapper .container .issue #date, body #wrapper .container .issue article .issue-number {
   text-align: center;
   font-weight: bold;
   font-size: 1.5em;
 }
-/* line 71, ../sass/styles.scss */
-body #wrapper .container .issue #date a {
+/* line 73, ../sass/styles.scss */
+body #wrapper .container .issue #date a, body #wrapper .container .issue article .issue-number a {
   color: #ef2774;
   text-decoration: none;
 }
-/* line 74, ../sass/styles.scss */
-body #wrapper .container .issue #date a:hover {
+/* line 76, ../sass/styles.scss */
+body #wrapper .container .issue #date a:hover, body #wrapper .container .issue article .issue-number a:hover {
   border-bottom: 3px dotted #ef2774;
 }
-/* line 79, ../sass/styles.scss */
+/* line 81, ../sass/styles.scss */
 body #wrapper .container .issue img {
   box-shadow: rgba(255, 255, 255, 0.8) 0 1px 0, inset rgba(0, 0, 0, 0.05) 0 1px 0;
   text-align: center;
   pointer-event: none;
 }
-/* line 84, ../sass/styles.scss */
-body #wrapper .container .issue #toc {
+/* line 86, ../sass/styles.scss */
+body #wrapper .container .issue #toc, body #wrapper .container .issue article {
   margin-top: 2em;
   font-size: 1.3em;
   position: relative;
@@ -687,52 +804,52 @@ body #wrapper .container .issue #toc {
   -o-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 92, ../sass/styles.scss */
-body #wrapper .container .issue #toc h3 {
+/* line 94, ../sass/styles.scss */
+body #wrapper .container .issue #toc h3, body #wrapper .container .issue article h3 {
   margin-bottom: 0;
   color: #ef2774;
   text-shadow: white 0 1px 0;
 }
-/* line 97, ../sass/styles.scss */
-body #wrapper .container .issue #toc ul {
+/* line 99, ../sass/styles.scss */
+body #wrapper .container .issue #toc ul, body #wrapper .container .issue article ul {
   position: relative;
   font-family: Courier, "Lucida Sans Typewriter", "Lucida Typewriter", "Courier New", "American Typewriter";
   float: none;
   padding: .5em 0;
 }
-/* line 102, ../sass/styles.scss */
-body #wrapper .container .issue #toc ul li {
+/* line 104, ../sass/styles.scss */
+body #wrapper .container .issue #toc ul li, body #wrapper .container .issue article ul li {
   display: inline;
   padding: .6em;
   line-height: 1.3em;
   white-space: nowrap;
   font-weight: 600;
 }
-/* line 108, ../sass/styles.scss */
-body #wrapper .container .issue #toc ul li a {
+/* line 110, ../sass/styles.scss */
+body #wrapper .container .issue #toc ul li a, body #wrapper .container .issue article ul li a {
   color: #1a1a1a;
   text-decoration: none;
 }
-/* line 44, ../sass/Partials/_base.scss */
-body #wrapper .container .issue #toc ul li a:hover {
+/* line 46, ../sass/Partials/_base.scss */
+body #wrapper .container .issue #toc ul li a:hover, body #wrapper .container .issue article ul li a:hover {
   color: #ef2774;
 }
-/* line 113, ../sass/styles.scss */
+/* line 115, ../sass/styles.scss */
 body #wrapper .container #footer-nav {
   clear: both;
   width: 798px;
   text-align: center;
 }
-/* line 116, ../sass/styles.scss */
+/* line 118, ../sass/styles.scss */
 body #wrapper .container #footer-nav a {
   color: #1a1a1a;
   text-decoration: none;
 }
-/* line 44, ../sass/Partials/_base.scss */
+/* line 46, ../sass/Partials/_base.scss */
 body #wrapper .container #footer-nav a:hover {
   color: #ef2774;
 }
-/* line 120, ../sass/styles.scss */
+/* line 122, ../sass/styles.scss */
 body #wrapper #footer {
   width: 100%;
   position: relative;
@@ -744,28 +861,28 @@ body #wrapper #footer {
   color: #1a1a1a;
   text-align: center;
 }
-/* line 131, ../sass/styles.scss */
+/* line 133, ../sass/styles.scss */
 body #wrapper #footer h5 {
   text-align: center;
   margin: 0;
 }
 
-/* line 138, ../sass/styles.scss */
+/* line 140, ../sass/styles.scss */
 section {
   display: table-row;
 }
 
-/* line 139, ../sass/styles.scss */
+/* line 141, ../sass/styles.scss */
 figure {
   padding-bottom: 30px;
 }
 
-/* line 140, ../sass/styles.scss */
+/* line 142, ../sass/styles.scss */
 section + figure {
   clear: both;
 }
 
-/* line 141, ../sass/styles.scss */
+/* line 143, ../sass/styles.scss */
 figcaption a {
   color: #0055cc;
 }
@@ -786,7 +903,7 @@ figcaption a:active {
   color: #0055cc;
 }
 
-/* line 142, ../sass/styles.scss */
+/* line 144, ../sass/styles.scss */
 .prose {
   width: 74.54545%;
   float: left;
@@ -797,7 +914,7 @@ figcaption a:active {
   line-height: 1.2em;
 }
 
-/* line 147, ../sass/styles.scss */
+/* line 149, ../sass/styles.scss */
 .poem {
   width: 61.81818%;
   float: left;
@@ -808,24 +925,24 @@ figcaption a:active {
   line-height: 1.2em;
 }
 
-/* line 152, ../sass/styles.scss */
+/* line 154, ../sass/styles.scss */
 .poem p:last-of-type {
   padding-bottom: 30px;
 }
 
-/* line 153, ../sass/styles.scss */
+/* line 155, ../sass/styles.scss */
 h1, h2.title {
   font-family: Courier, "Lucida Sans Typewriter", "Lucida Typewriter", "Courier New", "American Typewriter";
   padding-top: 0;
   color: #1a1a1a;
 }
 
-/* line 158, ../sass/styles.scss */
+/* line 160, ../sass/styles.scss */
 h2.title {
   padding-bottom: 10px;
 }
 
-/* line 160, ../sass/styles.scss */
+/* line 162, ../sass/styles.scss */
 #logo h1 {
   width: 36.36364%;
   float: left;
@@ -836,7 +953,7 @@ h2.title {
   margin-left: 1em;
 }
 
-/* line 165, ../sass/styles.scss */
+/* line 167, ../sass/styles.scss */
 .tagline {
   width: 49.09091%;
   float: left;
@@ -846,18 +963,18 @@ h2.title {
   font-weight: bold;
   font-family: "Author", Helvetica, Arial, sans-serif;
 }
-/* line 169, ../sass/styles.scss */
+/* line 171, ../sass/styles.scss */
 .tagline h3 {
   padding-top: .2em;
   padding-left: 24px;
 }
 
-/* line 171, ../sass/styles.scss */
+/* line 173, ../sass/styles.scss */
 .fb {
   color: #3c68ca;
 }
 
-/* line 172, ../sass/styles.scss */
+/* line 174, ../sass/styles.scss */
 .btn {
   width: 10.90909%;
   float: right;
@@ -879,49 +996,105 @@ h2.title {
   padding-top: .2em;
 }
 
-/* line 184, ../sass/styles.scss */
+/* line 186, ../sass/styles.scss */
 .clearfix {
   overflow: hidden;
   *zoom: 1;
 }
 
-/* line 185, ../sass/styles.scss */
+/* line 187, ../sass/styles.scss */
 .space {
   color: white;
 }
 
+/* line 188, ../sass/styles.scss */
+.center {
+  display: inline-block;
+  align: center;
+}
+
+/* line 194, ../sass/styles.scss */
+#subscribe {
+  padding-left: 12px;
+  padding-bottom: 100px;
+}
+/* line 197, ../sass/styles.scss */
+#subscribe table {
+  margin-bottom: 40px;
+}
+/* line 198, ../sass/styles.scss */
+#subscribe tr {
+  height: 40px;
+}
+/* line 199, ../sass/styles.scss */
+#subscribe .panel {
+  position: relative;
+  padding-bottom: 260px;
+  width: 200px;
+}
+/* line 203, ../sass/styles.scss */
+#subscribe .panel figure {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+}
+/* line 205, ../sass/styles.scss */
+#subscribe .panel figure figcaption {
+  padding-top: 8px;
+}
+/* line 208, ../sass/styles.scss */
+#subscribe form {
+  padding-bottom: 40px;
+}
+
+@media screen and (max-width: 420px) {
+  /* line 213, ../sass/styles.scss */
+  #wrapper, .container, #footer, .container #footer-nav, h3, header, nav {
+    max-width: 100%;
+    text-align: left;
+  }
+  /* line 217, ../sass/styles.scss */
+  #wrapper .tagline, #wrapper .btn, .container .tagline, .container .btn, #footer .tagline, #footer .btn, .container #footer-nav .tagline, .container #footer-nav .btn, h3 .tagline, h3 .btn, header .tagline, header .btn, nav .tagline, nav .btn {
+    display: none;
+  }
+  /* line 218, ../sass/styles.scss */
+  #wrapper h1, .container h1, #footer h1, .container #footer-nav h1, h3 h1, header h1, nav h1 {
+    width: 100%;
+  }
+}
+
 @media print {
-  /* line 189, ../sass/styles.scss */
+  /* line 225, ../sass/styles.scss */
   * {
     color: #000;
   }
 
-  /* line 190, ../sass/styles.scss */
-  #date {
+  /* line 226, ../sass/styles.scss */
+  #date, .issue article .issue-number {
     margin-top: 80px;
   }
 
-  /* line 192, ../sass/styles.scss */
+  /* line 228, ../sass/styles.scss */
   .container {
     width: 80%;
   }
 
-  /* line 193, ../sass/styles.scss */
-  header, nav, #date a, .pager, #footer, #footer-nav {
+  /* line 229, ../sass/styles.scss */
+  header, nav, #date a, .issue article .issue-number a, .pager, #footer, #footer-nav {
     display: none;
   }
 
-  /* line 194, ../sass/styles.scss */
+  /* line 230, ../sass/styles.scss */
   figure, .poem {
     page-break-inside: avoid;
   }
 
-  /* line 195, ../sass/styles.scss */
+  /* line 231, ../sass/styles.scss */
   p {
     page-break-inside: never;
   }
 
-  /* line 196, ../sass/styles.scss */
+  /* line 232, ../sass/styles.scss */
   .poem {
     width: 74.54545%;
     float: left;
@@ -930,12 +1103,12 @@ h2.title {
     clear: both;
   }
 
-  /* line 197, ../sass/styles.scss */
+  /* line 233, ../sass/styles.scss */
   .poem + .poem {
     page-break-before: always;
   }
 
-  /* line 198, ../sass/styles.scss */
+  /* line 234, ../sass/styles.scss */
   figcaption {
     margin-top: 8px;
   }

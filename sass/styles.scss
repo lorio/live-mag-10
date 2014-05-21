@@ -4,6 +4,8 @@
 @import "Partials/base";
 @import "Partials/pager";
 @import "Partials/dark";
+@import "Partials/issues";
+@import "Partials/panel";
 //@import "Partials/navigation";
 
 * {
@@ -183,6 +185,40 @@ h2.title {padding-bottom: 10px;}
 }
 .clearfix {@include clearfix;}
 .space {color : white}
+%center {
+  display: inline-block;
+  align: center;
+  
+}
+.center {@extend %center}
+#subscribe {
+	padding-left: 12px;
+	padding-bottom: 100px;
+	table {margin-bottom: 40px;}
+	tr {height: 40px}
+	.panel {
+		position: relative;
+		padding-bottom: 260px;
+		width: 200px;
+		figure {
+			position: absolute;top:30px;left: 40px; 
+			figcaption {padding-top: 8px;}
+		}
+	}
+	form {padding-bottom: 40px;}
+	// @include mq(){
+	// 	width: 95%;
+	// }
+}
+#wrapper, .container, #footer, .container #footer-nav, h3, header, nav{
+	@include mq(){
+				max-width: 100%;
+				text-align: left;
+				.tagline, .btn {display: none;}
+				h1 {width: 100%}
+				
+			}
+}
 ///// print styles /////
 
 @media print {
