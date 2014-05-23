@@ -470,7 +470,7 @@ img, video {
   margin: 0 auto;
   background: #070707 repeat;
   color: #f9f9f9;
-  max-width: 798px;
+  max-width: 99%;
 }
 /* line 7, ../sass/Partials/_dark.scss */
 .dark-container header {
@@ -717,7 +717,7 @@ body #wrapper .container {
   margin: 0 auto;
   background: #f9f9f9 repeat;
   color: #1a1a1a;
-  max-width: 798px;
+  max-width: 99%;
 }
 /* line 35, ../sass/styles.scss */
 body #wrapper .container header {
@@ -837,7 +837,7 @@ body #wrapper .container .issue #toc ul li a:hover, body #wrapper .container .is
 /* line 115, ../sass/styles.scss */
 body #wrapper .container #footer-nav {
   clear: both;
-  width: 798px;
+  width: 99%;
   text-align: center;
 }
 /* line 118, ../sass/styles.scss */
@@ -1010,7 +1010,7 @@ h2.title {
 /* line 188, ../sass/styles.scss */
 .center {
   display: inline-block;
-  align: center;
+  text-align: center;
 }
 
 /* line 194, ../sass/styles.scss */
@@ -1027,74 +1027,63 @@ h2.title {
   height: 40px;
 }
 /* line 199, ../sass/styles.scss */
-#subscribe .panel {
-  position: relative;
-  padding-bottom: 260px;
-  width: 200px;
-}
-/* line 203, ../sass/styles.scss */
-#subscribe .panel figure {
-  position: absolute;
-  top: 30px;
-  left: 40px;
-}
-/* line 205, ../sass/styles.scss */
-#subscribe .panel figure figcaption {
-  padding-top: 8px;
-}
-/* line 208, ../sass/styles.scss */
 #subscribe form {
   padding-bottom: 40px;
 }
 
 @media screen and (max-width: 420px) {
-  /* line 213, ../sass/styles.scss */
-  #wrapper, .container, #footer, .container #footer-nav, h3, header, nav {
-    max-width: 100%;
-    text-align: left;
+  /* line 202, ../sass/styles.scss */
+  * {
+    max-width: 400px;
   }
-  /* line 217, ../sass/styles.scss */
-  #wrapper .tagline, #wrapper .btn, .container .tagline, .container .btn, #footer .tagline, #footer .btn, .container #footer-nav .tagline, .container #footer-nav .btn, h3 .tagline, h3 .btn, header .tagline, header .btn, nav .tagline, nav .btn {
+}
+
+@media screen and (max-width: 420px) {
+  /* line 207, ../sass/styles.scss */
+  .tagline, .btn {
     display: none;
   }
-  /* line 218, ../sass/styles.scss */
-  #wrapper h1, .container h1, #footer h1, .container #footer-nav h1, h3 h1, header h1, nav h1 {
+}
+
+@media screen and (max-width: 420px) {
+  /* line 212, ../sass/styles.scss */
+  header #logo h1 {
     width: 100%;
   }
 }
 
 @media print {
-  /* line 225, ../sass/styles.scss */
+  /* line 220, ../sass/styles.scss */
   * {
     color: #000;
   }
 
-  /* line 226, ../sass/styles.scss */
+  /* line 221, ../sass/styles.scss */
   #date, .issue article .issue-number {
     margin-top: 80px;
   }
 
-  /* line 228, ../sass/styles.scss */
+  /* line 223, ../sass/styles.scss */
   .container {
     width: 80%;
   }
 
-  /* line 229, ../sass/styles.scss */
+  /* line 224, ../sass/styles.scss */
   header, nav, #date a, .issue article .issue-number a, .pager, #footer, #footer-nav {
     display: none;
   }
 
-  /* line 230, ../sass/styles.scss */
+  /* line 225, ../sass/styles.scss */
   figure, .poem {
     page-break-inside: avoid;
   }
 
-  /* line 231, ../sass/styles.scss */
+  /* line 226, ../sass/styles.scss */
   p {
     page-break-inside: never;
   }
 
-  /* line 232, ../sass/styles.scss */
+  /* line 227, ../sass/styles.scss */
   .poem {
     width: 74.54545%;
     float: left;
@@ -1103,12 +1092,12 @@ h2.title {
     clear: both;
   }
 
-  /* line 233, ../sass/styles.scss */
+  /* line 228, ../sass/styles.scss */
   .poem + .poem {
     page-break-before: always;
   }
 
-  /* line 234, ../sass/styles.scss */
+  /* line 229, ../sass/styles.scss */
   figcaption {
     margin-top: 8px;
   }

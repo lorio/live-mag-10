@@ -187,7 +187,7 @@ h2.title {padding-bottom: 10px;}
 .space {color : white}
 %center {
   display: inline-block;
-  align: center;
+  text-align: center;
   
 }
 .center {@extend %center}
@@ -196,28 +196,23 @@ h2.title {padding-bottom: 10px;}
 	padding-bottom: 100px;
 	table {margin-bottom: 40px;}
 	tr {height: 40px}
-	.panel {
-		position: relative;
-		padding-bottom: 260px;
-		width: 200px;
-		figure {
-			position: absolute;top:30px;left: 40px; 
-			figcaption {padding-top: 8px;}
-		}
-	}
 	form {padding-bottom: 40px;}
-	// @include mq(){
-	// 	width: 95%;
-	// }
+
 }
-#wrapper, .container, #footer, .container #footer-nav, h3, header, nav{
+ *{
 	@include mq(){
-				max-width: 100%;
-				text-align: left;
-				.tagline, .btn {display: none;}
-				h1 {width: 100%}
-				
-			}
+		max-width: 400px;
+	}
+}
+.tagline, .btn {
+	@include mq(){
+		display: none;
+	}
+}
+header #logo h1 {
+	@include mq(){
+		width: 100%;
+	}
 }
 ///// print styles /////
 
