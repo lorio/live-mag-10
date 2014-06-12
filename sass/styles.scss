@@ -1,4 +1,4 @@
-
+@import "Partials/body";
 @import "Partials/typography";
 @import "Partials/normalize";
 @import "Partials/base";
@@ -168,7 +168,7 @@ h2.title {padding-bottom: 10px;}
 	@include grid-span(4, 4);
 	font-weight: bold; 
 	font-family: $sans;
-	h3 {padding-top: .2em; padding-left: 24px;}
+	h3 {padding-top: .2em; padding-left: 8px;}
 }
 .fb {color: $fb;}
 .btn {
@@ -204,7 +204,7 @@ h2.title {padding-bottom: 10px;}
 		max-width: 400px;
 	}
 }
-.tagline, .btn {
+.tagline {
 	@include mq(){
 		display: none;
 	}
