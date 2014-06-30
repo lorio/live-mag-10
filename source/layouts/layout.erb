@@ -1,0 +1,26 @@
+<!doctype html>
+<html class="no-js" lang="EN">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <title>LiVE MAG! <%= current_page.data.title %> </title>
+    <meta name="description" content="<%= current_page.data.description %>" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='apple-touch-icon-144x144.png' rel='apple-touch-icon' sizes='144x144'>
+    <link href='apple-touch-icon-114x114.png' rel='apple-touch-icon' sizes='114x114'>
+    <link href='apple-touch-icon-72x72.png' rel='apple-touch-icon' sizes='72x72'>
+    <link href='apple-touch-icon.png' rel='apple-touch-icon'>
+    <link href='favicon.png' rel='shortcut icon'>
+    <link href='favicon.ico' rel='icon' type='image/ico'>    
+    <%= stylesheet_link_tag "styles" %>
+    <%= javascript_include_tag  "all" %>
+  </head>
+  
+  <body id="<%= page_id %>">
+    <%= yield %>
+      <div id="footer">
+        <h5>&copy; 2014 Live Mag! Rights reserved.  Editor Jeffrey Cyphers Wright</h5>
+      </div>    
+    </div>
+  </body>
+</html>

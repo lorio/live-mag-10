@@ -1,0 +1,16 @@
+@import "compass/css3/font-face";
+/* The "Author" webfont embedded below are copyright protected by 
+ila Dilworth with all right reerved. If you wih to ue them 
+on your webite, email ila@typetrut.com for licening info.*/
+@include font-face('Author',
+    font-files( "authorweb-regular.woff", woff,
+                "authorweb-regular.ttf", ttf,
+                "authorweb-regular.svg", svg),
+                "authorweb-regular.eot", normal, normal);
+ 
+@include font-face('Author',
+    font-files( "authorweb-regular.woff", woff,
+                "authorweb-regular.ttf", ttf,
+                "authorweb-regular.svg", svg),
+                "authorweb-regular.eot", bold, normal);
+ 

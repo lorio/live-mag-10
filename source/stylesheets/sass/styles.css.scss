@@ -1,0 +1,231 @@
+@import "Partials/body";
+@import "Partials/typography";
+@import "Partials/normalize";
+@import "Partials/base";
+@import "Partials/pager";
+@import "Partials/dark";
+@import "Partials/issues";
+@import "Partials/panel";
+//@import "Partials/navigation";
+
+* {
+	margin: 0;
+	padding: 0;
+	@include box-sizing(border-box);
+}
+html {height: 100%}
+body {
+	background: image-url("zigzag.png") repeat;
+	font-family: $sans;
+	color : $whitish;
+	#wrapper {
+		width: 800px;
+		height: auto;
+		min-height : 100%;
+		height : auto !important;
+		height: 100%;
+		margin: 0 auto;
+		background: $whitish repeat;
+		color: $main-color;	
+		.container {
+			margin: 0 auto ;	
+			background: $whitish repeat;
+			color: $main-color;
+			max-width: $container-width;	
+			header {
+				width : 100%;
+				height : 60px;
+				//padding-top: 4em;
+				background-color: $accent-color;
+				color: $main-color;
+				@include letterpress(0.5);
+				a {@include unstyled-link;}
+				}
+			nav {
+				ul {
+					text-align: center;
+					padding: 0;
+					li {
+						font-family: $heading-font-family;
+						font-weight: 600;
+						padding: 0 2em;
+						display: inline;
+						a {
+							color: $accent-color;
+							text-decoration: none;
+							&:hover {
+							border-bottom: 3px dotted $accent-color;
+							}
+						}
+					}	
+				}
+			}
+				.issue {
+					display: inline-block;
+					text-align: center;
+					position: relative;
+					width: 100%;
+					//padding-bottom: $footer-height;
+					#date {
+						text-align: center;
+						font-weight: bold;
+						font-size: 1.5em;
+						a {
+							color: $accent-color;
+							text-decoration: none;
+							&:hover {
+							border-bottom: 3px dotted $accent-color;
+							}
+						}
+					}
+					img {
+						@include box-emboss(0.8, 0.05);
+						text-align: center;
+						pointer-event: none;
+					}
+					#toc {
+						margin-top: 2em;
+						font-size: 1.3em;
+						position: relative;
+						@include grid-span(6, 2);
+						background-color: #e9eff1;
+						border: 1px dotted #ed541b;
+						@include border-radius();
+						h3 {
+							margin-bottom: 0;
+							color: $accent-color;
+							@include letterpress(1);
+						} 
+						ul {
+							position: relative;
+							font-family: $heading-font-family;
+							float: none;
+							padding: .5em 0;
+							li {
+							display: inline;
+							padding: .6em;
+							line-height: 1.3em;
+							white-space: nowrap;
+							font-weight: 600;
+							a {@include toc-link;}
+						}
+					}
+				}
+			}
+			#footer-nav {
+				clear: both;
+				@include center;
+				a {@include toc-link;}
+			}
+		}
+		
+		#footer {
+			//@include grid-span(5, 1);
+			width: 100%;
+			position: relative;
+			margin-top: 1em;
+			padding: 1em;
+			height: 4em;
+			clear: both;
+			background-color: $whitish;
+			color: $main-color;
+			text-align : center;
+			h5 {
+				text-align : center;
+				margin: 0;
+			}
+		}
+	}
+}
+section {display: table-row}
+figure {padding-bottom: 30px;}
+section + figure {clear: both;}
+figcaption a {@include link-colors(#05c, #05c, #05c, #05c, #05c);}
+.prose {
+	@include isolation-span(6, 2, both);
+	text-align: left;
+	line-height: 1.2em;
+}
+.poem {
+	@include isolation-span(5, 3, both);
+	text-align: left;
+	line-height: 1.2em;
+}
+.poem p:last-of-type {padding-bottom: 30px;}
+h1, h2.title {
+	 font-family: $heading-font-family;
+	 padding-top: 0;
+	 color: $main-color;
+	 }
+h2.title {padding-bottom: 10px;}
+//p {font-size: 90%}
+#logo h1 {
+	@include grid-span(3, 1);
+	line-height: .6em;
+	margin-left: 1em;
+}
+.tagline {
+	@include grid-span(4, 4);
+	font-weight: bold; 
+	font-family: $sans;
+	h3 {padding-top: .2em; padding-left: 8px;}
+}
+.fb {color: $fb;}
+.btn {
+	@include grid-span(1, 8);
+	@include box-emboss(0.8, 0.05);
+	@include letterpress(0.9);
+	@include border-radius;
+	background-color: #eec07d;
+	color: $main-color;
+	font-weight: bold;
+	text-align: center;
+	margin: 1.4em 2em 0 0;
+	padding-top: .2em;
+}
+.clearfix {@include clearfix;}
+.space {color : white}
+%center {
+  display: inline-block;
+  text-align: center;
+  
+}
+.center {@extend %center}
+#ppal {
+	padding-left: 12px;
+	padding-bottom: 100px;
+	table {margin-bottom: 40px;}
+	tr {height: 40px}
+	form {padding-bottom: 40px;}
+
+}
+ *{
+	@include mq(){
+		max-width: 320px;
+	}
+}
+.tagline {
+	@include mq(){
+		display: none;
+	}
+}
+header #logo h1 {
+	@include mq(){
+		width: 100%;
+	}
+}
+///// print styles /////
+
+@media print {
+	* {color: #000;}
+	#date {margin-top: 80px;}
+	//img {width: 80%; height: 80%;}
+	.container {width: 80%;}
+	header, nav, #date a, .pager, #footer, #footer-nav {display: none;}
+	figure, .poem {page-break-inside: avoid;}
+	p {page-break-inside: never;}
+	.poem {@include isolation-span(6, 2, both);}
+	.poem +.poem{page-break-before: always;}
+	figcaption {margin-top: 8px;}
+}
+
