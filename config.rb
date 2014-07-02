@@ -18,7 +18,7 @@ require 'toolkit'
 # page "/path/to/file.html", :layout => false
 #
 # With alternative layout
-# page "/path/to/file.html", :layout => :otherlayout
+ page "/issue_11/*", :layout => "issue"
 #
 # A path which all have the same layout
 # with_layout :admin do

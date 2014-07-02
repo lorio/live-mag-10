@@ -6,8 +6,8 @@ gem "middleman", "~>3.3.2"
 
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"
-gem 'singularitygs', '~> 1.2.0'
-gem 'toolkit', '~> 2.0.0'
+gem 'singularitygs', '~> 1.1.2'
+gem 'toolkit', '~> 1.3.8'
 gem 'middleman-imageoptim', '~> 0.1.4'
 gem "font-awesome-middleman", "~> 4.0.3"
 
