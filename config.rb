@@ -1,12 +1,12 @@
 ###
 # Compass
 ###
-require "singularitygs"
-require 'toolkit'
+#require "singularitygs"
+#require 'toolkit'
 # Change Compass configuration
- compass_config do |config|
-   config.output_style = :expanded
- end
+# compass_config do |config|
+#   config.output_style = (environment == :development) ? :nested : :compressed
+# end
 
 ###
 # Page options, layouts, aliases and proxies
@@ -61,7 +61,7 @@ set :relative_links, true
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
-  # activate :minify_css
+   activate :minify_css
 
   # Minify Javascript on build
    activate :minify_javascript
@@ -73,7 +73,7 @@ configure :build do
 
   # Use relative URLs
    activate :relative_assets
-   #activate :imageoptim
+   activate :imageoptim
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 end
